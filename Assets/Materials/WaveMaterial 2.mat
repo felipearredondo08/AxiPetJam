@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaveMaterial
+  m_Name: WaveMaterial 2
   m_Shader: {fileID: 4800000, guid: ba3ef793d91c62e41a57720895c702eb, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -30,11 +30,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _Amplitude: 0.1
-    - _AmplitudeX: 0.06
-    - _AmplitudeY: 0
+    - _AmplitudeX: 0.01
+    - _AmplitudeY: 0.001
     - _OffsetScale: 1
     - _Speed: 1
-    - _WaveLength: 1
+    - _WaveLength: 10
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
