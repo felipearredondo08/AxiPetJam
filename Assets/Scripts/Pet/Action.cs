@@ -2,7 +2,7 @@
 
 public class Action : ScriptableObject
 {
-    private string _nombre;
-    private string stat;
-    private string statPoints;
+    public string nombre;
+    public string stat;
+    public string statPoints;
 }

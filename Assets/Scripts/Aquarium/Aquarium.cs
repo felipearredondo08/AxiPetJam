@@ -3,22 +3,22 @@
 public class Aquarium : MonoBehaviour
 {
     private Sprite background;
-    private int cleanlinessLevel;
+    private AquariumStats stats;
 
     public void CleanAquarium()
     {
-        cleanlinessLevel = 100;
+        stats.cleanlinessLevel = 100;
     }
 
     public void DirtyAquarium()
     {
-        if (cleanlinessLevel == 0)
+        if (stats.cleanlinessLevel == 0)
         {
             return;
         }
-        else if (cleanlinessLevel >= 5)
+        else if (stats.cleanlinessLevel >= 5)
         {
-            cleanlinessLevel -= 5;
+            stats.cleanlinessLevel -= 5;
         }
     }
 }

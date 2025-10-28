@@ -1,14 +1,23 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(menuName = "Stats/Pet", fileName = "PetStats")]
 public class PetStats : ScriptableObject
 {
-    public int _hungerLevel;
-    public int _sleepLevel;
-    public int _happinessLevel;
-    public string _name;
-    public Mood _mood;
+    public int hungerLevel;
+    public int sleepLevel;
+    public int happinessLevel;
+    public string name;
+    public Mood mood;
     
+    public UnityEvent statsEvent;
+
+    private void OnEnable()
+    {
+        statsEvent ??= new UnityEvent();
+    }
 }
 
 public enum Mood

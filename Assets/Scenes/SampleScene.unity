@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 42181381}
   - component: {fileID: 42181382}
   m_Layer: 5
-  m_Name: Slider (2)
+  m_Name: SliderHappiness
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 231776082}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -1848,7 +1848,7 @@ GameObject:
   - component: {fileID: 932150783}
   - component: {fileID: 932150784}
   m_Layer: 5
-  m_Name: Slider (3)
+  m_Name: SliderClean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1921,7 +1921,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1199585123}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -1938,7 +1938,7 @@ GameObject:
   - component: {fileID: 965817543}
   - component: {fileID: 965817544}
   m_Layer: 0
-  m_Name: Fondo
+  m_Name: Aquarium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12798,7 +12798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21994519, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12832,6 +12832,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1531643418}
+  - component: {fileID: 1531643419}
   m_Layer: 5
   m_Name: Sliders
   m_TagString: Untagged
@@ -12859,9 +12860,25 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 19}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1531643419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531643417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba28cb45d61ff67488070e549ec2202e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIStats
+  foodLevelSlider: {fileID: 1544204410}
+  sleepLevelSlider: {fileID: 1653648785}
+  happinessLevelSlider: {fileID: 42181382}
+  petStats: {fileID: 11400000, guid: 06bb63bd92ce97f48ace9e1ad3b91590, type: 2}
 --- !u!1 &1544204408
 GameObject:
   m_ObjectHideFlags: 0
@@ -12873,7 +12890,7 @@ GameObject:
   - component: {fileID: 1544204409}
   - component: {fileID: 1544204410}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: SliderFood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12946,7 +12963,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 111950019}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -13240,7 +13257,7 @@ GameObject:
   - component: {fileID: 1653648784}
   - component: {fileID: 1653648785}
   m_Layer: 5
-  m_Name: Slider (1)
+  m_Name: SliderSleep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13313,7 +13330,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1701072438}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -13788,7 +13805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e04b57e994a94cbf99e99d3dc795bd16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pet
-  stats: {fileID: 0}
+  stats: {fileID: 11400000, guid: 06bb63bd92ce97f48ace9e1ad3b91590, type: 2}
 --- !u!1 &1792423795
 GameObject:
   m_ObjectHideFlags: 0

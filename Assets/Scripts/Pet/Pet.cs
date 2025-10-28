@@ -6,12 +6,10 @@ public class Pet : MonoBehaviour
 {
     [SerializeField] private PetStats stats;
     private AnimatorController _animator;
-    private Aquarium _aquarium;
 
     private void Awake()
     {
         _animator = GetComponent<AnimatorController>();
-        _aquarium = GameObject.Find("Fondo").GetComponent<Aquarium>();//busca el GameObject acua
     }
 
     public void GetAction(Action action)
