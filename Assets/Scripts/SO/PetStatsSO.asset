@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c76ee235cc109499aebbd455f221c1, type: 3}
   m_Name: PetStatsSO
   m_EditorClassIdentifier: Assembly-CSharp::PetStats
-  hungerLevel: 50
-  sleepLevel: 50
-  happinessLevel: 50
+  hungerLevel: 0
+  sleepLevel: 0
+  happinessLevel: 0
   name: Axi
   mood: 3
   maxHungerLevel: 100
