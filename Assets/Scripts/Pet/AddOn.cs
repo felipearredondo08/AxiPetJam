@@ -2,7 +2,7 @@
 
 public class AddOn
 {
-    private AddOnPosition position = new AddOnPosition();
+    private AddOnPosition position;
     private Sprite image;
 }
 

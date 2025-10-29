@@ -1,8 +1,19 @@
 ﻿using UnityEngine;
 
+[CreateAssetMenu(fileName = "ActionSO", menuName = "Action")]
 public class Action : ScriptableObject
 {
-    public string nombre;
-    public string stat;
-    public string statPoints;
+    [SerializeField] private Stat stat;
+    [SerializeField] private int statPoints;
+
+    public Stat Stat => stat;
+
+    public int StatPoints => statPoints;
+}
+
+public enum Stat
+{
+    HungerLevel, 
+    SleepLevel,
+    HappinessLevel,
 }

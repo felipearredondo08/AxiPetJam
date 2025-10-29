@@ -459,8 +459,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 0}
+  m_AnchoredPosition: {x: 0.000053406, y: 0}
+  m_SizeDelta: {x: 43.995, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &111950020
 MonoBehaviour:
@@ -475,14 +475,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 75c180fe009655243945d7b0514373b6, type: 3}
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -536,6 +536,60 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &176452689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 176452691}
+  - component: {fileID: 176452690}
+  m_Layer: 0
+  m_Name: Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &176452690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176452689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605510480d924e6e8bb708f2cb658af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CareController
+  pet: {fileID: 1775442907}
+  aquarium: {fileID: 965817544}
+  playerStats: {fileID: 11400000, guid: 19f723267fe49a7438fce37ba93e8765, type: 2}
+  cooldownStatsTimer: 2
+  cooldownDirtyAquaTimer: 4
+  cooldownMoodTimer: 3
+  cooldownActionTimer: 10
+  play: {fileID: 11400000, guid: 2cfbfe4d45ae0fa4cb91287472a585c5, type: 2}
+  eat: {fileID: 11400000, guid: 9ffc508506f8a5742b1b5e9e0a5a8abc, type: 2}
+  sleep: {fileID: 11400000, guid: 652ac29aefdcc9a42906fea863cab386, type: 2}
+--- !u!4 &176452691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176452689}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &208527535
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,11 +668,11 @@ Transform:
   m_GameObject: {fileID: 208527535}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.9998925, w: -0.014667293}
-  m_LocalPosition: {x: 8.04, y: 6.78, z: 0}
+  m_LocalPosition: {x: 7.2162, y: 6.15078, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 965817543}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -181.681}
 --- !u!1 &231776081
 GameObject:
@@ -654,8 +708,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 0}
+  m_AnchoredPosition: {x: 0.0000076293945, y: 0}
+  m_SizeDelta: {x: 34.085, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &231776083
 MonoBehaviour:
@@ -677,7 +731,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 75c180fe009655243945d7b0514373b6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1968,6 +2022,7 @@ Transform:
   - {fileID: 250112750}
   - {fileID: 1271734015}
   - {fileID: 523390978}
+  - {fileID: 208527537}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &965817544
@@ -1982,6 +2037,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72a4bf7edd9450cbd1d7c25cd0a5fb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Aquarium
+  background: {fileID: 0}
+  stats: {fileID: 11400000, guid: 93e672863f4d17a47942b7f1bad91f22, type: 2}
 --- !u!1 &969456483
 GameObject:
   m_ObjectHideFlags: 0
@@ -12878,7 +12935,9 @@ MonoBehaviour:
   foodLevelSlider: {fileID: 1544204410}
   sleepLevelSlider: {fileID: 1653648785}
   happinessLevelSlider: {fileID: 42181382}
-  petStats: {fileID: 11400000, guid: 06bb63bd92ce97f48ace9e1ad3b91590, type: 2}
+  cleanlinessLevelSlider: {fileID: 932150784}
+  pet: {fileID: 1775442907}
+  aquarium: {fileID: 965817544}
 --- !u!1 &1544204408
 GameObject:
   m_ObjectHideFlags: 0
@@ -13370,8 +13429,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 0}
+  m_AnchoredPosition: {x: -0.000016212, y: 0}
+  m_SizeDelta: {x: 42.634, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1701072439
 MonoBehaviour:
@@ -13386,7 +13445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.17037821, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13806,6 +13865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pet
   stats: {fileID: 11400000, guid: 06bb63bd92ce97f48ace9e1ad3b91590, type: 2}
+  lowLevel: 35
 --- !u!1 &1792423795
 GameObject:
   m_ObjectHideFlags: 0
@@ -14499,7 +14559,7 @@ SceneRoots:
   - {fileID: 965817543}
   - {fileID: 1753746690}
   - {fileID: 1118644432}
-  - {fileID: 208527537}
   - {fileID: 337228532}
   - {fileID: 405703806}
   - {fileID: 1775442906}
+  - {fileID: 176452691}

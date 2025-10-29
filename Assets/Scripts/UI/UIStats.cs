@@ -7,46 +7,39 @@ public class UIStats : MonoBehaviour
     public Slider sleepLevelSlider;
     public Slider happinessLevelSlider;
     public Slider cleanlinessLevelSlider;
-    public PetStats petStats;
-    public AquariumStats aquariumStats;
+    public Pet pet;
+    public Aquarium aquarium;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        petStats.statsEvent.AddListener(UpdateFoodLevel);
-        petStats.statsEvent.AddListener(UpdateSleepLevel);
-        petStats.statsEvent.AddListener(UpdateHappinessLevel);
-        petStats.statsEvent.Invoke();
+        pet.Stats.statsEvent.AddListener(UpdateFoodLevel);
+        pet.Stats.statsEvent.AddListener(UpdateSleepLevel);
+        pet.Stats.statsEvent.AddListener(UpdateHappinessLevel);
+        pet.Stats.statsEvent.Invoke();
         
-        aquariumStats.aquariumEvent.AddListener(UpdateCleanlinessLevel);
-        aquariumStats.aquariumEvent.Invoke();
+        aquarium.Stats.aquariumEvent.AddListener(UpdateCleanlinessLevel);
+        aquarium.Stats.aquariumEvent.Invoke();
     }
 
     private void UpdateFoodLevel()
     {
-        foodLevelSlider.value = petStats.hungerLevel;
+        foodLevelSlider.value = pet.Stats.HungerLevel;
     }
 
     private void UpdateSleepLevel()
     {
-        sleepLevelSlider.value = petStats.sleepLevel;
+        sleepLevelSlider.value = pet.Stats.SleepLevel;
     }
 
     private void UpdateHappinessLevel()
     {
-        happinessLevelSlider.value = petStats.happinessLevel;
+        happinessLevelSlider.value = pet.Stats.HappinessLevel;
     }
 
     private void UpdateCleanlinessLevel()
     {
-        cleanlinessLevelSlider.value = aquariumStats.cleanlinessLevel;
+        cleanlinessLevelSlider.value = aquarium.Stats.CleanlinessLevel;
     }
-    
-    [ContextMenu("ChangeCleanlinessLevel")]
-    public void ChangeCleanlinessLevel()
-    {
-        Debug.Log("Cambiando el nivel de limpieza en el juego...");
-        aquariumStats.cleanlinessLevel = 50; 
-        aquariumStats.aquariumEvent.Invoke();
-    }
-    
 }

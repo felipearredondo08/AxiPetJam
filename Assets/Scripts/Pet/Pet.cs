@@ -1,38 +1,106 @@
-﻿using System;
-using UnityEditor.Animations;
+﻿using UnityEditor.Animations;
 using UnityEngine;
 
 public class Pet : MonoBehaviour
 {
     [SerializeField] private PetStats stats;
     private AnimatorController _animator;
+    [SerializeField] private int lowLevel = 35;
 
     private void Awake()
     {
         _animator = GetComponent<AnimatorController>();
     }
 
-    public void GetAction(Action action)
+    [ContextMenu("DecreaseRandomStat")]
+    public void DecreaseRandomStat()
     {
-        //ejecutar accion en la animación 
-        //subir estadisticas
+        int i = Random.Range(0, 3);
+        switch (i)
+        {
+            case 0:
+                Stats.HappinessLevel -= 10;
+                break;
+            case 1:
+                Stats.HungerLevel -= 10;
+                break;
+            case 2:
+                Stats.SleepLevel -= 10;
+                break;
+        }
+
+        Stats.statsEvent.Invoke();
     }
 
-    public void ChangeMood(Mood mood)
+    public PetStats Stats => stats;
+
+    public void CallToAction(Action action)
     {
-        //cambiar aimacion dependiendo del estado de animo
-        //animacion dormir
+        switch (action.Stat)
+        {
+            case Stat.HappinessLevel: //Playing
+                Stats.HappinessLevel += action.StatPoints;
+                //Temporal animation
+                print("Action: " + action.Stat);
+                break;
+            case Stat.HungerLevel: //Eating
+                Stats.HungerLevel += action.StatPoints;
+                //Temporal animation
+                print("Action: " + action.Stat);
+                break;
+            case Stat.SleepLevel: //Sleeping
+                Stats.SleepLevel += action.StatPoints;
+                //Temporal animation
+                print("Action: " + action.Stat);
+                break;
+        }
+
+        Stats.statsEvent.Invoke();
     }
 
-    public void Eat(int points)
+    public void SetMood()
     {
-        //añadir puntos al nivel de saciedad
-        //animacion dormir
-    }
+        int lowCount = 0;
 
-    public void Sleep(int points)
-    {
-        //añadir puntos de sueño
-        //animacion dormir
+        if (stats.HungerLevel <= lowLevel) lowCount++;
+        if (stats.SleepLevel <= lowLevel) lowCount++;
+        if (stats.HappinessLevel <= lowLevel) lowCount++;
+        
+        if (lowCount == 3)
+        {
+            stats.Mood = Mood.Angry;
+            //Animation State
+            print("Mood: " + stats.Mood);
+        }
+        else if (lowCount == 2)
+        {
+            stats.Mood = Mood.Sad;
+            print("Mood: " + stats.Mood);
+            //Animation State
+        }
+        else if (stats.SleepLevel <= lowLevel)
+        {
+            stats.Mood = Mood.Tired;
+            print("Mood: " + stats.Mood);
+            //Animation State
+        }
+        else if (stats.HungerLevel <= lowLevel)
+        {
+            stats.Mood = Mood.Hungry;
+            print("Mood: " + stats.Mood);
+            //Animation State
+        }
+        else if (stats.HappinessLevel <= lowLevel)
+        {
+            stats.Mood = Mood.Bored;
+            print("Mood: " + stats.Mood);
+            //Animation State
+        }
+        else
+        {
+            stats.Mood = Mood.Happy;
+            print("Mood: " + stats.Mood);
+            //Animation State
+        }
     }
 }
