@@ -1415,6 +1415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 523390978}
   - component: {fileID: 523390979}
+  - component: {fileID: 523390980}
   m_Layer: 0
   m_Name: FiltroVidrio
   m_TagString: Untagged
@@ -1495,6 +1496,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &523390980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523390977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb6e3bc4a787744d8eb55ff817cc9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CleanlinessVisualController
+  aquariumStats: {fileID: 11400000, guid: 93e672863f4d17a47942b7f1bad91f22, type: 2}
+  filtroVidrioRenderer: {fileID: 523390979}
+  maxCleanlinessLevel: 100
 --- !u!1 &594058524
 GameObject:
   m_ObjectHideFlags: 0
@@ -13842,7 +13858,7 @@ GameObject:
   - component: {fileID: 1775442904}
   - component: {fileID: 1775442907}
   m_Layer: 0
-  m_Name: Axie-anim-idle-Sheet_0
+  m_Name: Personaje
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

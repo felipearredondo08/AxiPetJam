@@ -16,3 +16,4 @@ MonoBehaviour:
   aquariumEvent:
     m_PersistentCalls:
       m_Calls: []
+  maxCleanlinessLevel: 100
