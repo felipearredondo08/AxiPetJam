@@ -65,18 +65,18 @@ public class Pet : MonoBehaviour
         if (stats.HungerLevel <= lowLevel) lowCount++;
         if (stats.SleepLevel <= lowLevel) lowCount++;
         if (stats.HappinessLevel <= lowLevel) lowCount++;
-        
+
         if (lowCount == 3)
         {
             stats.Mood = Mood.Angry;
-            _animator.SetInteger("MoodState", ((int)stats.Mood));
-           // Debug.Log((int)stats.Mood);
+            // _animator.SetInteger("MoodState", ((int)stats.Mood));
+            // Debug.Log((int)stats.Mood);
             print("Mood: " + stats.Mood);
         }
         else if (lowCount == 2)
         {
             stats.Mood = Mood.Sad;
-             _animator.SetInteger("MoodState", ((int)stats.Mood));
+            //  _animator.SetInteger("MoodState", ((int)stats.Mood));
             print("Mood: " + stats.Mood);
             //Animation State
         }
@@ -99,11 +99,12 @@ public class Pet : MonoBehaviour
             //Animation State
         }
         else
-        {   
-             _animator.SetInteger("MoodState", ((int)stats.Mood)); //Animacion Feliz
+        {
+
             stats.Mood = Mood.Happy;
             print("Mood: " + stats.Mood);
             //Animation State
         }
+           _animator.SetInteger("MoodState", ((int)stats.Mood)); 
     }
 }
