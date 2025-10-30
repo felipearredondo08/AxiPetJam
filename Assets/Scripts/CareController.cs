@@ -11,7 +11,7 @@ public class CareController : MonoBehaviour
     private bool _isDecreaseStatsReady = true;
     [SerializeField] private float cooldownStatsTimer = 2f;
     private bool _isDecreaseCleanlinessReady = true;
-    [SerializeField] private float cooldownDirtyAquaTimer = 4f;
+    [SerializeField] private float cooldownDirtyAquaTimer = 16f;
     private bool _isSetMoodReady = true;
     [SerializeField] private float cooldownMoodTimer = 3f;
     [SerializeField] private float cooldownActionTimer = 10f;
@@ -60,12 +60,14 @@ public class CareController : MonoBehaviour
     [ContextMenu("Sleep")]
     public void Sleep()
     {
+        
         pet.CallToAction(sleep);
     }
     
     [ContextMenu("Clean")]
     public void Clean()
     {
+        
         aquarium.CleanAquarium();
     }
 
