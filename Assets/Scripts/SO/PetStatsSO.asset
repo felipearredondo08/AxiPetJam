@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PetStats
   hungerLevel: 0
   sleepLevel: 0
-  happinessLevel: 10
+  happinessLevel: 0
   name: Axi
   mood: 3
   maxHungerLevel: 100
