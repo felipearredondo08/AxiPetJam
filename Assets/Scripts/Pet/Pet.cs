@@ -4,12 +4,12 @@ using UnityEngine;
 public class Pet : MonoBehaviour
 {
     [SerializeField] private PetStats stats;
-    private AnimatorController _animator;
+    private Animator _animator;
     [SerializeField] private int lowLevel = 35;
 
     private void Awake()
     {
-        _animator = GetComponent<AnimatorController>();
+        _animator = GetComponent<Animator>();
     }
 
     [ContextMenu("DecreaseRandomStat")]
@@ -69,12 +69,14 @@ public class Pet : MonoBehaviour
         if (lowCount == 3)
         {
             stats.Mood = Mood.Angry;
-            //Animation State
+            _animator.SetInteger("MoodState", ((int)stats.Mood));
+           // Debug.Log((int)stats.Mood);
             print("Mood: " + stats.Mood);
         }
         else if (lowCount == 2)
         {
             stats.Mood = Mood.Sad;
+             _animator.SetInteger("MoodState", ((int)stats.Mood));
             print("Mood: " + stats.Mood);
             //Animation State
         }
@@ -97,7 +99,8 @@ public class Pet : MonoBehaviour
             //Animation State
         }
         else
-        {
+        {   
+             _animator.SetInteger("MoodState", ((int)stats.Mood)); //Animacion Feliz
             stats.Mood = Mood.Happy;
             print("Mood: " + stats.Mood);
             //Animation State

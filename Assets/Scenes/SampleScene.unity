@@ -713,21 +713,21 @@ MonoBehaviour:
   m_LightType: 2
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.351
-  m_Color: {r: 1, g: 0, b: 0.96657753, a: 1}
+  m_Color: {r: 1, g: 0.2088135, b: 0, a: 1}
   m_Intensity: 28.3
-  m_LightVolumeIntensity: 1
+  m_LightVolumeIntensity: 0.03
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: -9133910998531526563, guid: 967f5ecb48703f0409b999b689c8d6bb, type: 3}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
-  m_OverlapOperation: 0
+  m_OverlapOperation: 1
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
   m_ShadowsEnabled: 1
-  m_ShadowIntensity: 0.75
+  m_ShadowIntensity: 0.668
   m_ShadowSoftness: 0.3
   m_ShadowSoftnessFalloffIntensity: 0.5
   m_ShadowVolumeIntensityEnabled: 0
@@ -14115,6 +14115,7 @@ MonoBehaviour:
   petStats: {fileID: 11400000, guid: 06bb63bd92ce97f48ace9e1ad3b91590, type: 2}
   animator: {fileID: 1775442904}
   moodParameterName: MoodState
+  currentMood: 0
 --- !u!1 &1792423795
 GameObject:
   m_ObjectHideFlags: 0
