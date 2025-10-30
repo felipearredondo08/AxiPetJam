@@ -2970,6 +2970,7 @@ GameObject:
   - component: {fileID: 727104628}
   - component: {fileID: 727104630}
   - component: {fileID: 727104629}
+  - component: {fileID: 727104631}
   m_Layer: 5
   m_Name: NombreAxi
   m_TagString: Untagged
@@ -3095,6 +3096,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 727104627}
   m_CullTransparentMesh: 1
+--- !u!114 &727104631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727104627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92b1cb0a0244c8f4b84cf64da10751e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NombreDisplay
+  petStatsSO: {fileID: 11400000, guid: 06bb63bd92ce97f48ace9e1ad3b91590, type: 2}
+  nombreText: {fileID: 727104629}
 --- !u!1 &755292666
 GameObject:
   m_ObjectHideFlags: 0
