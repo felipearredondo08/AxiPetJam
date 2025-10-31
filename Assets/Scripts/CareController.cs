@@ -14,6 +14,7 @@ public class CareController : MonoBehaviour
     [SerializeField] private float cooldownDirtyAquaTimer = 16f;
     private bool _isSetMoodReady = true;
     [SerializeField] private float cooldownMoodTimer = 3f;
+    private bool _isSetActionReady = true;
     [SerializeField] private float cooldownActionTimer = 10f;
 
     public Action play;

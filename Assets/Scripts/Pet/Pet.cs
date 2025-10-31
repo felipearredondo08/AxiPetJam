@@ -1,18 +1,18 @@
-﻿//using UnityEditor.Animations;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Pet : MonoBehaviour
 {
     [SerializeField] private PetStats stats;
     private Animator _animator;
+    private SoundManager _soundManager;
     [SerializeField] private int lowLevel = 35;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _soundManager = FindFirstObjectByType<SoundManager>();
     }
 
-    [ContextMenu("DecreaseRandomStat")]
     public void DecreaseRandomStat()
     {
         int i = Random.Range(0, 3);
@@ -28,7 +28,6 @@ public class Pet : MonoBehaviour
                 Stats.SleepLevel -= 10;
                 break;
         }
-
         Stats.statsEvent.Invoke();
     }
 
@@ -40,22 +39,28 @@ public class Pet : MonoBehaviour
         {
             case Stat.HappinessLevel: //Playing
                 Stats.HappinessLevel += action.StatPoints;
-                //Temporal animation
                 print("Action: " + action.Stat);
+                _soundManager.Play("axi-jugando");
                 break;
             case Stat.HungerLevel: //Eating
                 Stats.HungerLevel += action.StatPoints;
-                //Temporal animation
                 print("Action: " + action.Stat);
+                //Falta sonido
+                //_soundManager.Play("axi-comiendo");
                 break;
             case Stat.SleepLevel: //Sleeping
                 Stats.SleepLevel += action.StatPoints;
-                //Temporal animation
                 print("Action: " + action.Stat);
+                _soundManager.Play("axi-roncando");
                 break;
         }
-
         Stats.statsEvent.Invoke();
+        _animator.SetInteger("ActionState", ((int)action.Stat)); 
+    }
+
+    public void StopAction()
+    {
+        _animator.SetInteger("ActionState", 10);
     }
 
     public void SetMood()
@@ -69,15 +74,15 @@ public class Pet : MonoBehaviour
         if (lowCount == 3)
         {
             stats.Mood = Mood.Angry;
-            // _animator.SetInteger("MoodState", ((int)stats.Mood));
             // Debug.Log((int)stats.Mood);
             print("Mood: " + stats.Mood);
+            _soundManager.Play("axi-enojado");
         }
         else if (lowCount == 2)
         {
             stats.Mood = Mood.Sad;
-            //  _animator.SetInteger("MoodState", ((int)stats.Mood));
             print("Mood: " + stats.Mood);
+            _soundManager.Play("axi-diciendo no");
             //Animation State
         }
         else if (stats.SleepLevel <= lowLevel)
@@ -100,11 +105,11 @@ public class Pet : MonoBehaviour
         }
         else
         {
-
             stats.Mood = Mood.Happy;
             print("Mood: " + stats.Mood);
+            _soundManager.Play("axi-feliz");
             //Animation State
         }
-           _animator.SetInteger("MoodState", ((int)stats.Mood)); 
+        _animator.SetInteger("MoodState", (int)stats.Mood); 
     }
 }

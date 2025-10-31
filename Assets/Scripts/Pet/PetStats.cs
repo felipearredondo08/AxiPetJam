@@ -7,7 +7,7 @@ public class PetStats : ScriptableObject
     [SerializeField] private int hungerLevel;
     [SerializeField] private int sleepLevel;
     [SerializeField] private int happinessLevel;
-    [SerializeField] private string name;
+    [SerializeField] private string axiName;
     [SerializeField] private Mood mood;
     [SerializeField] private int maxHungerLevel = 100;
     [SerializeField] private int maxSleepLevel = 100;
@@ -41,8 +41,8 @@ public class PetStats : ScriptableObject
 
     public string Name
     {
-        get => name;
-        set => name = value;
+        get => axiName;
+        set => axiName = value;
     }
 
     public Mood Mood

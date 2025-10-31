@@ -8,16 +8,16 @@ public class MenuPrincipal : MonoBehaviour
 {
     [Header("Nombre de la escena del juego")]
     public string nombreSiguienteEscena; // Asignás el nombre desde el Inspector
-    
-    [Header("Modal de Nombre")]
-    public GameObject modalNombre;
+
+    [Header("Modal de Nombre")] public GameObject modalNombre;
     public TMP_InputField inputNombre;
     public Button buttonOk;
     public PetStats petStatsSO;
     public float fadeDuration = 0.3f;
-    
+    SoundManager soundManager;
+
     private CanvasGroup modalCanvasGroup;
-    
+
     void Start()
     {
         // Configurar el modal
@@ -26,13 +26,13 @@ public class MenuPrincipal : MonoBehaviour
         {
             modalCanvasGroup = modalNombre.AddComponent<CanvasGroup>();
         }
-        
+
         // Ocultar el modal al inicio
         modalNombre.SetActive(false);
         modalCanvasGroup.alpha = 0f;
         modalCanvasGroup.interactable = false;
         modalCanvasGroup.blocksRaycasts = false;
-        
+
         // Configurar el botón OK
         buttonOk.onClick.AddListener(GuardarNombreYContinuar);
     }
@@ -43,12 +43,12 @@ public class MenuPrincipal : MonoBehaviour
         // Mostrar el modal de nombre con fade
         StartCoroutine(MostrarModalNombre());
     }
-    
+
     private IEnumerator MostrarModalNombre()
     {
         // Activar el modal
         modalNombre.SetActive(true);
-        
+
         // Fade in
         float elapsedTime = 0f;
         while (elapsedTime < fadeDuration)
@@ -57,15 +57,15 @@ public class MenuPrincipal : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        
+
         // Asegurar que el alpha sea exactamente 1 al final
         modalCanvasGroup.alpha = 1f;
-        
+
         // Activar interacción
         modalCanvasGroup.interactable = true;
         modalCanvasGroup.blocksRaycasts = true;
     }
-    
+
     public void GuardarNombreYContinuar()
     {
         // Guardar el nombre en el ScriptableObject
@@ -73,7 +73,7 @@ public class MenuPrincipal : MonoBehaviour
         {
             petStatsSO.Name = inputNombre.text;
         }
-        
+
         // Cargar la siguiente escena
         if (!string.IsNullOrEmpty(nombreSiguienteEscena))
         {
@@ -91,7 +91,7 @@ public class MenuPrincipal : MonoBehaviour
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false; // Detiene el juego en el editor
 #else
-        Application.Quit(); // Cierra el juego compilado
+                Application.Quit(); // Cierra el juego compilado
 #endif
     }
 }
