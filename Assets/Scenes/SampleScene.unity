@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 15622022}
   - component: {fileID: 15622021}
   - component: {fileID: 15622020}
+  - component: {fileID: 15622023}
   m_Layer: 5
   m_Name: ButtonSound
   m_TagString: Untagged
@@ -288,6 +289,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15622018}
   m_CullTransparentMesh: 1
+--- !u!114 &15622023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15622018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2f6073c5d3ee34cab84c413ffc5b15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorChangeUI
+  cursorTexture: {fileID: 2800000, guid: 381e7d5d8eecd5448b0a7a404e3bebe3, type: 3}
+  cursorHotspot: {x: 16, y: 0}
 --- !u!1 &28008947
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,6 +976,7 @@ GameObject:
   - component: {fileID: 178300098}
   - component: {fileID: 178300097}
   - component: {fileID: 178300096}
+  - component: {fileID: 178300099}
   m_Layer: 5
   m_Name: ButtonMusic
   m_TagString: Untagged
@@ -1082,6 +1098,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178300094}
   m_CullTransparentMesh: 1
+--- !u!114 &178300099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178300094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2f6073c5d3ee34cab84c413ffc5b15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorChangeUI
+  cursorTexture: {fileID: 2800000, guid: 381e7d5d8eecd5448b0a7a404e3bebe3, type: 3}
+  cursorHotspot: {x: 16, y: 0}
 --- !u!1 &208527535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,7 +1123,7 @@ GameObject:
   - component: {fileID: 208527537}
   - component: {fileID: 208527536}
   m_Layer: 0
-  m_Name: Spot Light 2D
+  m_Name: LuzPecera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1575,6 +1605,7 @@ GameObject:
   - component: {fileID: 303954635}
   - component: {fileID: 303954634}
   - component: {fileID: 303954633}
+  - component: {fileID: 303954636}
   m_Layer: 5
   m_Name: FeedButton
   m_TagString: Untagged
@@ -1696,6 +1727,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303954631}
   m_CullTransparentMesh: 1
+--- !u!114 &303954636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303954631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2f6073c5d3ee34cab84c413ffc5b15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorChangeUI
+  cursorTexture: {fileID: 2800000, guid: 381e7d5d8eecd5448b0a7a404e3bebe3, type: 3}
+  cursorHotspot: {x: 16, y: 0}
 --- !u!1 &337228531
 GameObject:
   m_ObjectHideFlags: 0
@@ -2015,6 +2060,7 @@ GameObject:
   - component: {fileID: 479364814}
   - component: {fileID: 479364813}
   - component: {fileID: 479364812}
+  - component: {fileID: 479364815}
   m_Layer: 5
   m_Name: LightButton
   m_TagString: Untagged
@@ -2136,6 +2182,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479364810}
   m_CullTransparentMesh: 1
+--- !u!114 &479364815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479364810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2f6073c5d3ee34cab84c413ffc5b15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorChangeUI
+  cursorTexture: {fileID: 2800000, guid: 381e7d5d8eecd5448b0a7a404e3bebe3, type: 3}
+  cursorHotspot: {x: 16, y: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2304,7 +2364,7 @@ Transform:
   m_LocalScale: {x: 4, y: 3.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 965817543}
+  m_Father: {fileID: 1825208046}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &523390979
 SpriteRenderer:
@@ -2352,7 +2412,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_Sprite: {fileID: -855298285791758126, guid: 070d216e09b9b2b47a30025aedc13f3b, type: 3}
   m_Color: {r: 0.037148, g: 1, b: 0, a: 0}
   m_FlipX: 0
@@ -3635,8 +3695,9 @@ GameObject:
   - component: {fileID: 913793690}
   - component: {fileID: 913793689}
   - component: {fileID: 913793688}
+  - component: {fileID: 913793691}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: ButtonExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3744,6 +3805,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 913793686}
   m_CullTransparentMesh: 1
+--- !u!114 &913793691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913793686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2f6073c5d3ee34cab84c413ffc5b15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorChangeUI
+  cursorTexture: {fileID: 2800000, guid: 381e7d5d8eecd5448b0a7a404e3bebe3, type: 3}
+  cursorHotspot: {x: 16, y: 0}
 --- !u!1 &932150782
 GameObject:
   m_ObjectHideFlags: 0
@@ -3872,7 +3947,6 @@ Transform:
   - {fileID: 1313471349}
   - {fileID: 250112750}
   - {fileID: 1271734015}
-  - {fileID: 523390978}
   - {fileID: 1470544862}
   - {fileID: 1825208046}
   m_Father: {fileID: 0}
@@ -4259,6 +4333,7 @@ GameObject:
   - component: {fileID: 1120918324}
   - component: {fileID: 1120918323}
   - component: {fileID: 1120918322}
+  - component: {fileID: 1120918325}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -4380,6 +4455,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120918320}
   m_CullTransparentMesh: 1
+--- !u!114 &1120918325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120918320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2f6073c5d3ee34cab84c413ffc5b15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorChangeUI
+  cursorTexture: {fileID: 2800000, guid: 381e7d5d8eecd5448b0a7a404e3bebe3, type: 3}
+  cursorHotspot: {x: 16, y: 0}
 --- !u!1 &1153716504
 GameObject:
   m_ObjectHideFlags: 0
@@ -4482,6 +4571,7 @@ GameObject:
   - component: {fileID: 1169716832}
   - component: {fileID: 1169716831}
   - component: {fileID: 1169716830}
+  - component: {fileID: 1169716833}
   m_Layer: 5
   m_Name: CareButton
   m_TagString: Untagged
@@ -4591,6 +4681,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169716828}
   m_CullTransparentMesh: 1
+--- !u!114 &1169716833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169716828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2f6073c5d3ee34cab84c413ffc5b15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorChangeUI
+  cursorTexture: {fileID: 2800000, guid: 381e7d5d8eecd5448b0a7a404e3bebe3, type: 3}
+  cursorHotspot: {x: 16, y: 0}
 --- !u!1 &1186978747
 GameObject:
   m_ObjectHideFlags: 0
@@ -4603,6 +4707,7 @@ GameObject:
   - component: {fileID: 1186978751}
   - component: {fileID: 1186978750}
   - component: {fileID: 1186978749}
+  - component: {fileID: 1186978752}
   m_Layer: 5
   m_Name: OptionsButton
   m_TagString: Untagged
@@ -4712,6 +4817,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186978747}
   m_CullTransparentMesh: 1
+--- !u!114 &1186978752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186978747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2f6073c5d3ee34cab84c413ffc5b15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorChangeUI
+  cursorTexture: {fileID: 2800000, guid: 381e7d5d8eecd5448b0a7a404e3bebe3, type: 3}
+  cursorHotspot: {x: 16, y: 0}
 --- !u!1 &1199585122
 GameObject:
   m_ObjectHideFlags: 0
@@ -16705,6 +16824,7 @@ Transform:
   - {fileID: 722886215}
   - {fileID: 1290729263}
   - {fileID: 1800178985}
+  - {fileID: 523390978}
   m_Father: {fileID: 965817543}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1845455073
@@ -17172,6 +17292,7 @@ GameObject:
   - component: {fileID: 2038496542}
   - component: {fileID: 2038496541}
   - component: {fileID: 2038496540}
+  - component: {fileID: 2038496543}
   m_Layer: 5
   m_Name: CleanButton
   m_TagString: Untagged
@@ -17293,6 +17414,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038496538}
   m_CullTransparentMesh: 1
+--- !u!114 &2038496543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038496538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2f6073c5d3ee34cab84c413ffc5b15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorChangeUI
+  cursorTexture: {fileID: 2800000, guid: 381e7d5d8eecd5448b0a7a404e3bebe3, type: 3}
+  cursorHotspot: {x: 16, y: 0}
 --- !u!1 &2040034765
 GameObject:
   m_ObjectHideFlags: 0
