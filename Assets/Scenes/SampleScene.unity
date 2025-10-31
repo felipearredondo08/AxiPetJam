@@ -920,6 +920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 176452691}
   - component: {fileID: 176452690}
+  - component: {fileID: 176452692}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -964,6 +965,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &176452692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176452689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27983c9317c6f1547b4c70c5969917e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LuzPeceraController
+  luzPecera: {fileID: 208527535}
+  pet: {fileID: 1775442907}
 --- !u!1 &178300094
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,7 +1209,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1825208046}
+  m_Father: {fileID: 965817543}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -181.681}
 --- !u!1 &231776081
 GameObject:
@@ -2364,7 +2379,7 @@ Transform:
   m_LocalScale: {x: 4, y: 3.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1825208046}
+  m_Father: {fileID: 965817543}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &523390979
 SpriteRenderer:
@@ -2955,7 +2970,7 @@ Transform:
   m_LocalScale: {x: 11, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1825208046}
+  m_Father: {fileID: 965817543}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &722886216
 SpriteRenderer:
@@ -3045,7 +3060,7 @@ Transform:
   m_LocalScale: {x: 11, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1825208046}
+  m_Father: {fileID: 965817543}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &726371471
 SpriteRenderer:
@@ -3948,7 +3963,12 @@ Transform:
   - {fileID: 250112750}
   - {fileID: 1271734015}
   - {fileID: 1470544862}
-  - {fileID: 1825208046}
+  - {fileID: 208527537}
+  - {fileID: 726371470}
+  - {fileID: 722886215}
+  - {fileID: 1290729263}
+  - {fileID: 1800178985}
+  - {fileID: 523390978}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &965817544
@@ -14870,7 +14890,7 @@ Transform:
   m_LocalScale: {x: 12, y: 11, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1825208046}
+  m_Father: {fileID: 965817543}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1290729264
 SpriteRenderer:
@@ -16640,7 +16660,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1825208046}
+  m_Father: {fileID: 965817543}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1800178986
 SpriteRenderer:
@@ -16790,43 +16810,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1825208045
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1825208046}
-  m_Layer: 0
-  m_Name: PECERA KONE
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1825208046
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1825208045}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 208527537}
-  - {fileID: 726371470}
-  - {fileID: 722886215}
-  - {fileID: 1290729263}
-  - {fileID: 1800178985}
-  - {fileID: 523390978}
-  m_Father: {fileID: 965817543}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1845455073
 GameObject:
   m_ObjectHideFlags: 0
