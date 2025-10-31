@@ -14,12 +14,13 @@ public class MenuPrincipal : MonoBehaviour
     public Button buttonOk;
     public PetStats petStatsSO;
     public float fadeDuration = 0.3f;
-    SoundManager soundManager;
+    public SoundManager soundManager;
 
     private CanvasGroup modalCanvasGroup;
 
     void Start()
     {
+        
         // Configurar el modal
         modalCanvasGroup = modalNombre.GetComponent<CanvasGroup>();
         if (modalCanvasGroup == null)
@@ -77,6 +78,7 @@ public class MenuPrincipal : MonoBehaviour
         // Cargar la siguiente escena
         if (!string.IsNullOrEmpty(nombreSiguienteEscena))
         {
+            soundManager.Change("musica acuario");
             SceneManager.LoadScene(nombreSiguienteEscena);
         }
         else

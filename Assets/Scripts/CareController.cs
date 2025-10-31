@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
 
@@ -9,13 +10,13 @@ public class CareController : MonoBehaviour
     public PlayerStats playerStats;
     
     private bool _isDecreaseStatsReady = true;
-    [SerializeField] private float cooldownStatsTimer = 2f;
+    [SerializeField] private float cooldownStatsTimer = 16f;
     private bool _isDecreaseCleanlinessReady = true;
-    [SerializeField] private float cooldownDirtyAquaTimer = 16f;
+    [SerializeField] private float cooldownDirtyAquaTimer = 32f;
     private bool _isSetMoodReady = true;
     [SerializeField] private float cooldownMoodTimer = 3f;
     private bool _isSetActionReady = true;
-    [SerializeField] private float cooldownActionTimer = 10f;
+    [SerializeField] private float cooldownActionTimer = 1f;
 
     public Action play;
     public Action eat;
@@ -46,30 +47,60 @@ public class CareController : MonoBehaviour
         }
     }
 
-    [ContextMenu("Play")]
     public void Play()
     {
-        pet.CallToAction(play);
+        if (_isSetActionReady)
+        {
+            StartCoroutine(PlayCoolDown());
+        }
     }
     
-    [ContextMenu("Eat")]
     public void Eat()
     {
-        pet.CallToAction(eat);
+        if (_isSetActionReady)
+        {
+            StartCoroutine(EatCoolDown());
+        }
     }
     
-    [ContextMenu("Sleep")]
     public void Sleep()
     {
-        
-        pet.CallToAction(sleep);
+        if (_isSetActionReady)
+        {
+            StartCoroutine(SleepCoolDown());
+        }
     }
     
-    [ContextMenu("Clean")]
     public void Clean()
     {
-        
         aquarium.CleanAquarium();
+    }
+
+    //Perdon por este machetazo pero no hay tiempo
+    public IEnumerator PlayCoolDown()
+    {
+        _isSetActionReady = false;
+        pet.CallToAction(play);
+        yield return new WaitForSeconds(cooldownActionTimer);
+        _isSetActionReady = true;
+    }
+    
+    //Perdon por este machetazo pero no hay tiempo
+    public IEnumerator EatCoolDown()
+    {
+        _isSetActionReady = false;
+        pet.CallToAction(eat);
+        yield return new WaitForSeconds(cooldownActionTimer);
+        _isSetActionReady = true;
+    }
+    
+    //Perdon por este machetazo pero no hay tiempo
+    public IEnumerator SleepCoolDown()
+    {
+        _isSetActionReady = false;
+        pet.CallToAction(sleep);
+        yield return new WaitForSeconds(cooldownActionTimer);
+        _isSetActionReady = true;
     }
 
     private void WrapSetMood()

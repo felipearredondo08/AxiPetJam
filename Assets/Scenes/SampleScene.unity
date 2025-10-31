@@ -946,7 +946,7 @@ MonoBehaviour:
   cooldownStatsTimer: 2
   cooldownDirtyAquaTimer: 4
   cooldownMoodTimer: 3
-  cooldownActionTimer: 10
+  cooldownActionTimer: 1
   play: {fileID: 11400000, guid: 2cfbfe4d45ae0fa4cb91287472a585c5, type: 2}
   eat: {fileID: 11400000, guid: 9ffc508506f8a5742b1b5e9e0a5a8abc, type: 2}
   sleep: {fileID: 11400000, guid: 652ac29aefdcc9a42906fea863cab386, type: 2}
