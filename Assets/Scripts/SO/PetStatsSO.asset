@@ -16,7 +16,7 @@ MonoBehaviour:
   sleepLevel: 100
   happinessLevel: 100
   axiName: 
-  mood: 1
+  mood: 0
   maxHungerLevel: 100
   maxSleepLevel: 100
   maxHappinessLevel: 100
