@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b76477d110b402fa3d2a7ab777227a3, type: 3}
   m_Name: AquariumSO
   m_EditorClassIdentifier: Assembly-CSharp::AquariumStats
-  cleanlinessLevel: 0
+  cleanlinessLevel: 100
   aquariumEvent:
     m_PersistentCalls:
       m_Calls: []
